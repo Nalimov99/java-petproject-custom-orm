@@ -67,10 +67,10 @@ public class Processor {
 		for (Field field : annotatedFields) {
 			if (field.isAnnotationPresent(AutoIncrement.class)) {
 				stringJoinerSql.add(
-								field.getName()
-								+ " "
-								+ field.getAnnotation(Column.class).type().getType()
-								+ " PRIMARY KEY AUTOINCREMENT"
+						field.getName()
+						+ " "
+						+ field.getAnnotation(Column.class).type().getType()
+						+ " PRIMARY KEY AUTOINCREMENT"
 				);
 				continue;
 			}
